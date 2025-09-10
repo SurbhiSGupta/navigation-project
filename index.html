@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bodai Jewels - Fun Projects</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        font-family: "Arial", sans-serif;
+        min-height: 100vh;
+        color: white;
+      }
+
+      /* Navigation Bar */
+      .navbar {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 1rem 2rem;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #ffd700;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+      }
+
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+        font-weight: 500;
+      }
+
+      .nav-links a:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px);
+      }
+
+      .nav-links a.active {
+        background: #ffd700;
+        color: #333;
+      }
+
+      /* Main Content */
+      .main-content {
+        margin-top: 100px;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      .hero {
+        max-width: 800px;
+        margin: 0 auto 4rem;
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        margin-bottom: 2rem;
+      }
+
+      /* Project Cards */
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .project-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 2rem;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        background: rgba(255, 255, 255, 0.15);
+      }
+
+      .project-icon {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+      }
+
+      .project-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #ffd700;
+      }
+
+      .project-card p {
+        opacity: 0.9;
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+      }
+
+      .project-link {
+        display: inline-block;
+        background: #ffd700;
+        color: #333;
+        padding: 0.8rem 2rem;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s ease;
+      }
+
+      .project-link:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+      }
+
+      /* Footer */
+      .footer {
+        margin-top: 4rem;
+        padding: 2rem;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .footer p {
+        opacity: 0.7;
+      }
+
+      /* Mobile Responsiveness */
+      @media (max-width: 768px) {
+        .nav-links {
+          gap: 1rem;
+        }
+
+        .nav-links a {
+          padding: 0.4rem 0.8rem;
+          font-size: 0.9rem;
+        }
+
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .projects-grid {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+
+        .navbar {
+          padding: 1rem;
+        }
+
+        .logo {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">Bodai Jewels</div>
+        <ul class="nav-links">
+          <li><a href="#" class="active">Home</a></li>
+          <li>
+            <a href="https://wheel.bodaijewels.com" target="_blank">Wheel</a>
+          </li>
+          <li>
+            <a href="https://spinner.bodaijewels.com" target="_blank"
+              >Spinner</a
+            >
+          </li>
+          <li>
+            <a href="https://bodaijewels.com" target="_blank">Main Site</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <section class="hero">
+        <h1>Fun Interactive Projects</h1>
+        <p>
+          Explore a collection of interactive web experiences and tools created
+          for entertainment and utility.
+        </p>
+      </section>
+
+      <!-- Projects Grid -->
+      <section class="projects-grid">
+        <div
+          class="project-card"
+          onclick="window.open('https://wheel.bodaijewels.com', '_blank')"
+        >
+          <div class="project-icon">🎡</div>
+          <h3>Wheel Project</h3>
+          <p>
+            An interactive spinning wheel for making decisions, selecting random
+            options, or just having fun with friends.
+          </p>
+          <a
+            href="https://wheel.bodaijewels.com"
+            class="project-link"
+            target="_blank"
+            >Try the Wheel</a
+          >
+        </div>
+
+        <div
+          class="project-card"
+          onclick="window.open('https://spinner.bodaijewels.com', '_blank')"
+        >
+          <div class="project-icon">👗</div>
+          <h3>Outfit Spinner</h3>
+          <p>
+            Spin three colorful wheels to create random outfit combinations.
+            Perfect for when you can't decide what to wear!
+          </p>
+          <a
+            href="https://spinner.bodaijewels.com"
+            class="project-link"
+            target="_blank"
+            >Spin an Outfit</a
+          >
+        </div>
+
+        <div
+          class="project-card"
+          onclick="window.open('https://bodaijewels.com', '_blank')"
+        >
+          <div class="project-icon">💎</div>
+          <h3>Main Website</h3>
+          <p>
+            Visit the main Bodai Jewels website to explore our beautiful jewelry
+            collection and latest designs.
+          </p>
+          <a href="https://bodaijewels.com" class="project-link" target="_blank"
+            >Shop Jewelry</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2025 Bodai Jewels. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Add smooth scrolling and interactive effects
+      document.addEventListener("DOMContentLoaded", function () {
+        // Add hover effects to project cards
+        const cards = document.querySelectorAll(".project-card");
+
+        cards.forEach((card) => {
+          card.addEventListener("mouseenter", function () {
+            this.style.transform = "translateY(-10px) scale(1.02)";
+          });
+
+          card.addEventListener("mouseleave", function () {
+            this.style.transform = "translateY(0) scale(1)";
+          });
+        });
+
+        // Add click animation to project links
+        const links = document.querySelectorAll(".project-link");
+
+        links.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.stopPropagation();
+            this.style.transform = "scale(0.95)";
+            setTimeout(() => {
+              this.style.transform = "scale(1.05)";
+            }, 100);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
